@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="scripts/tabs-manager.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/chronometer.js"></script>
+    <script src="scripts/minuteur.js"></script>
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    
+<section id="clock">
+
+    <nav id="tabs">
+        <span id="horloge-tab" class="tab">Horloge</span>
+        <span id="chrono-tab" class="tab">Chronometre</span>
+        <span id="minuteur-tab" class="tab">Minuteur</span>
+        <span id="reveil-tab" class="tab">Reveil</span>
+    </nav>
+    
+    <div id="content">
+        <div id="horloge" style="display:block;"></div>
+
+        <div id="chronometre" style="display:none;">
+            <p class="hour-text">
+                00<span class="small">h </span> 
+                00<span class="small">m </span> 
+                00<span class="small">s "00</span>
+            </p>
+            
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+            <button id="lap">Lap</button>
+            
+            <ol id="laps-text"></ol>
+        </div>
+        
+        <div id="minuteur" style="display:none;">
+            <!-- <input type="time" name="time" id="minuteur-input"> -->
+
+            <div id="minuteur-container" class="hour-text">
+                <div class="time-row">
+                    <button id="tenth-h-up" class="minuteur-btn">+</button>
+                    <span class="nb" id="tenth-h">0</span>
+                    <button id="tenth-h-down" class="minuteur-btn">-</button>
+                </div>
+                <div class="time-row">
+                    <button id="h-up" class="minuteur-btn">+</button>
+                    <span class="nb" id="h">0:</span>
+                    <button id="h-down" class="minuteur-btn">-</button>
+                </div>
+                
+                <div class="time-row">
+                    <button id="tenth-m-up" class="minuteur-btn">+</button>
+                    <span class="nb" id="tenth-m">0</span>
+                    <button id="tenth-m-down" class="minuteur-btn">-</button>
+                </div>
+                <div class="time-row">
+                    <button id="m-up" class="minuteur-btn">+</button>
+                    <span class="nb" id="m">0:</span>
+                    <button id="m-down" class="minuteur-btn">-</button>
+                </div>
+
+                <div class="time-row">
+                    <button id="tenth-s-up" class="minuteur-btn">+</button>
+                    <span class="nb" id="tenth-s">0</span>
+                    <button id="tenth-s-down" class="minuteur-btn">-</button>
+                </div>
+                <div class="time-row">
+                    <button id="s-up" class="minuteur-btn">+</button>
+                    <span class="nb" id="s">0</span>
+                    <button id="s-down" class="minuteur-btn">-</button>
+                </div>
+            </div>
+
+            <button id="start-minuteur">Start</button>
+            <button id="stop-minuteur">Stop</button>
+        </div>
+
+        <div id="reveil" style="display:none;">reveil</div>
+    </div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'DS-DIGIT';
+    src: url(fonts/DS-Digital/DS-DIGIB.TTF);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hour-text {
+    font-family: 'DS-DIGIT';
+    font-size: 50px;
+}
+
+#tabs {
+    user-select: none;
+    width: fit-content;
+    margin: auto;
+}
+
+#content {
+    border: 1px solid blue;
+    width: 50vw;
+    margin: auto;
+}
+
+#horloge-tab {
+    background-color: rgb(136, 199, 255);
+}
+
+#minuteur-tab {
+    background-color: rgb(255, 143, 143);
+}
+
+#chrono-tab {
+    background-color: rgb(144, 255, 144);
+}
+
+#reveil-tab {
+    background-color: rgb(255, 245, 104);
+}
+
+.small {
+    font-size: 26px;
+    align-items: baseline;
+}
+
+#minuteur-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.time-row {
+    display: flex;
+    flex-direction: column;
+}
