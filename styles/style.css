@@ -46,12 +46,7 @@
     align-items: baseline;
 }
 
-#minuteur-container {
-    display: flex;
+.box {
+    border: 1px solid red;
     flex-direction: row;
-}
-
-.time-row {
-    display: flex;
-    flex-direction: column;
 }
