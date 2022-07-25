@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background: #d8b450;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 4px 4px 5px rgba(255, 255, 255, 0.4),
+        inset -4px -4px 5px rgba(0, 0, 0, 0.2),
+        10px 40px 40px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    position: relative;
+
+}
+
+
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    padding: 10px 10px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+#title {
+    font-size: 35px;
+    font-family: "Prompt", cursive;
+}
+
+#minuteur {
+    display: grid;
+    grid-template-columns: repeat(5, 65px);
+    gap: 5px;
+    margin: 4vh auto;
+    color: #fff;
+
+}
+
+.box {
+    height: 80px;
+    text-align: center;
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box>div:first-child {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.unite {
+    padding: 5px;
+    background-color: #0a0a0a;
+    font-size: 10px;
+    text-align: center;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.button {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 4px 4px 5px rgba(255, 255, 255, 0.4),
+        inset -4px -4px 5px rgba(0, 0, 0, 0.2),
+        10px 40px 40px rgba(0, 0, 0, 0.4);
+    transition: 0.4s;
+    cursor: pointer;
+    margin: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+.button:hover {
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.button:active {
+    background-color: #1b1b1b;
+    color: #fff;
+    transition: 0.4s;
+}
+
+
+#start {
+    background-image: url(../images/play.png);
+    background-size: cover;
+}
+
+#reset {
+    background-image: url(../images/refresh.png);
+    background-size: cover;
+}
+
+.laps {
+    width: 340px;
+    max-height: 200px;
+    overflow-y: auto;
+    color: #fff;
+    padding-bottom: 55px;
+    list-style: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+
+
+.laps::-webkit-scrollbar {
+    display: none;
+}
+
+.lap-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #444;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    margin-bottom: 10px;
+    font-family: "Prompt", cursive;
+    font-size: 20px;
+}
+
+
+.number,
+.time-stamp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.lap-clear {
+    position: absolute;
+    bottom: 20px;
+    border: none;
+    background-color: transparent;
+    width: 200px;
+    height: 60px;
+    border-radius: 50px;
+    transition: 0.2s;
+    cursor: pointer;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    font-family: "Prompt", cursive;
+    font-size: 20px;
+}
+
+.lap-clear:hover {
+    background-color: #00000080;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    height: 10%;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.4)
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+footer ul li a {
+    font-weight: 800;
+    text-decoration: none;
+    color: #fdfdfdda;
+    text-shadow: 1px 1px #000000;
+    transition: 0.4s;
+}
+
+footer ul li a:hover {
+    color: #000000;
+    transition: 0.4s;
+}
+
+
+@media only screen and (min-width : 500px) {
+
+    #title {
+        font-size: 40px;
+    }
+
+    #minuteur {
+        grid-template-columns: repeat(5, 85px);
+        gap: 10px;
+        margin: 5px;
+    }
+
+    .box {
+        height: 100px;
+    }
+
+    .box>div:first-child {
+        font-size: 55px;
+    }
+
+    .unite {
+        font-size: 15px;
+    }
+
+}
+
+
+@media only screen and (min-width : 768px) {
+    #title {
+        font-size: 50px;
+    }
+
+    #minuteur {
+        grid-template-columns: repeat(5, 140px);
+    }
+
+    .box {
+        height: 155px;
+    }
+
+    .box>div:first-child {
+        font-size: 90px;
+    }
+
+    .unite {
+        font-size: 20px;
+    }
+
+}
+
+
+
+@media only screen and (min-width : 1060px) {
+
+
+    #wrapper {
+        padding: 10px 10px;
+    }
+
+
+    #title {
+        font-size: 50px;
+        margin: 1vh auto;
+    }
+
+    #minuteur {
+        grid-template-columns: repeat(5, 160px);
+        gap: 15px;
+    }
+
+    .box {
+        height: 160px;
+    }
+
+    .box>div:first-child {
+        font-size: 80px;
+        padding: 10px;
+    }
+
+    .unite {
+        padding: 10px 10px;
+        font-size: 20px;
+    }
+
+}
